@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Integrify Gallery 2018</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class ="left-container">
+            <div>
+                    <img src="/images/integrify-logo-neg.svg" alt="Integrify Logo">
+                    <p>Welcome to Integrify Gallery</p>
+            </div>
+ 
+                        
+        </div>
+        <div class = "right-container">
+            <div>
+                <div class="info show">
+                    <div class= "right-heading">
+                        <h3 id= "api-btn1"><a href="/api"> API </a></h3>
+                        <h3 id= "api-btn2"><a href="/addNew"> AddNew </a></h3>
+                    </div>
+                    <h1>Partners</h1>
+                      <div class = "img-logos">
+                            <img src="/images/digia-logo.svg" alt="Digia Logo">
+                            <img src="/images/druid-logo.svg" alt="Druid Logo">
+                            <img src="/images/fraktio-logo-white.svg" alt="Fraktio Logo">
+                            <img src="/images/wunder-logo.png" alt="Wunder Logo">
+                            <img src="/images/omni-logo.png" alt="Omni Logo">
+                            <img src="/images/helsinki-logo-2017.png" alt="Helsinki Logo">
+                      </div>  
+                </div>
+                <div class ="indiv-information hide">
+                    <div class="info-div">
+                        <h2 class="key-name">Name: </h2>
+                        <p></p>
+                        <h2 class="key-name">Title: </h2>
+                        <p></p>
+                        <h2 class="key-name">Nationality: </h2>
+                        <p></p>
+                        <h2 class="key-name">Skills: </h2>
+                        <p></p>
+                        <h2 class="key-name">Why: </h2>
+                        <p></p>
+                        <h2 class="key-name">Vision: </h2>
+                        <p></p>
+                        <h2 class="key-name">Motivation: </h2>
+                        <p></p>
+                        <h2 class="key-name">Favorite Quote: </h2>
+                        <p></p>
+                        <h2 class="key-name">Joined Date: </h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "mid-container">
+            <div class="thumbnail-img">
+                <% data.forEach(item=>{ %>
+                    <a href= <%= `/indv-files/${item.lastName}` %>> <img src=<%= `/images/thumbnails/${item.src}` %> 
+                        alt = <%= `${item.firstName}` %> />
+                    </a>
+                <% }) %> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

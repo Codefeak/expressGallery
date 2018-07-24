@@ -62,7 +62,9 @@
         <div class = "mid-container">
             <div class="thumbnail-img">
                 <% data.forEach(item=>{ %>
-                    <a href= <%= `/indv-files/${item.lastName}` %>> <img src=<%= `/images/thumbnails/${item.src}` %> 
+                    <a href= <%= `/indv-files/${item.lastName}` %>>
+                        <% function capitalize(string){return string.charAt(0).toUpperCase() + string.slice(1);} %> 
+                        <img src=<%= `/images/thumbnails/${capitalize(item.src)}` %> 
                         alt = <%= `${item.firstName}` %> />
                     </a>
                 <% }) %> 

@@ -11,7 +11,6 @@
 <body>
     <div class="main-container">
         <div class="left-indv-container">
-            <button id="left-btn"><</button>
             <div class="indiv-image" >
                 <% info.forEach(item=>{ %>
                     <% function capitalize(string){return string.charAt(0).toUpperCase() + string.slice(1);} %>
@@ -28,13 +27,8 @@
                     <% }) %>
                 <% }) %>   
             </div>
-            <button id="right-btn">></button>
         </div>
-        <% info.forEach(item=>{ %>
-            <form id= "delete-btn"  method="delete" encType="multipart/form-data" action=<%= `/indv-files/${item.lastName}` %>>
-                <input  type="submit"  value = "Delete">
-            </form>
-        <% }) %>  
+        <a href="/"><input type="submit" value="Back" ></a>
     </div>
 </body>
 </html>

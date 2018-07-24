@@ -7,7 +7,9 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engine":"10.6.0",
+  "engine":{
+    "node":"10.6.0"
+  },
   "author": "Rojak Amatya",
   "license": "ISC",
   "dependencies": {

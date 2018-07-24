@@ -1,5 +1,5 @@
 const express = require('express');
-const port = 5000;
+const port = process.env.PORT || 3000;
 const app = express();
 const ejs = require('ejs');
 const data = require('./public/data.js');

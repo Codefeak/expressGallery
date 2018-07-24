@@ -38,6 +38,25 @@ body{
   justify-content: center;
 }
 
+.left-indv-container{
+  height: 100%;
+  grid-column: 1;
+  display:grid;
+  align-content: center;
+  justify-content: center;
+  border: 1px solid orangered;
+}
+
+.right-indv-container{
+  height:100%;
+  grid-column:2;
+  background-color: #59738a;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  border: 1px solid orangered;
+}
+
 .right-container>div{
   height: 95%;
 }
@@ -163,4 +182,47 @@ body{
 
 .keys{
   text-transform: capitalize;
+}
+
+form{
+  width:50%;
+  margin: 2vw auto;
+}
+
+form>div{
+   width:100%;
+   display:grid;
+   grid-template-columns: 40% 60%;
+   justify-content: space-around;
+}
+
+#right-btn{
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+#left-btn{
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+#delete-btn{
+  grid-column: 1/3;
+  width:fit-content;
+  height: 30px;
+  justify-self: center;
+}
+
+.key-name>span{
+  text-transform: capitalize;
+  font-weight: 800;
+  color:#b0cc787d;
+}
+
+.right-indv-container>div{
+  margin-left:2vw;
 }

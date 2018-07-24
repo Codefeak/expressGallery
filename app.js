@@ -54,6 +54,21 @@ app.get('/indv-files/:id', (req,res)=>{
     res.render('indv-files', {info});
 });
 
+app.delete('/indv-files/:id', (req,res)=>{
+    console.log('a');
+    const id = (req.params.id);
+    let flag = false;
+    const info = data.data.filter(item =>{
+        if(item.lastName !== id){
+            return item;
+            flag = true;
+        }
+    })
+    if(!flag){
+        res.send('One information Deleted');
+    }
+});
+
 app.listen(port, ()=>{
     console.log(`Server stated on port ${port}`)
 });

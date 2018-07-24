@@ -85,6 +85,10 @@ body{
   text-decoration:none;
 }
 
+.img-logos{
+  text-align: center;
+}
+
 .img-logos>img{
   width:5vw;
   margin:0.5vw;

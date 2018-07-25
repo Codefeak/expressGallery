@@ -200,6 +200,12 @@ form>div{
    justify-content: space-around;
 }
 
+form>div>input{
+  background: transparent;
+  border: none;
+  border-bottom: 1px #bfbdbd;
+}
+
 #right-btn{
   width: fit-content;
   position: absolute;

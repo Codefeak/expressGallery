@@ -201,9 +201,10 @@ form>div{
 }
 
 form>div>input{
-  background: transparent;
+  background: #2f2c2cb3;
   border: none;
-  border-bottom: 1px #bfbdbd;
+  border-bottom: 1px solid #8a7f7f;
+  margin: 1px;
 }
 
 #right-btn{

@@ -32,15 +32,14 @@ app.post('/addNew/OK', (req,res)=>{
     
     const {firstName, lastName, title, nationality, src, alt, skills,whySofterDeveloper,longTermVision,motivatesMe,favoriteQuote, joinedOn } = req.body;
     data.data.push({firstName, lastName, title, nationality, src, alt, skills,whySofterDeveloper,longTermVision,motivatesMe,favoriteQuote, joinedOn});
-    console.log(data.data[data.data.length-1]);
-    console.log(req.files.src);
     let tmpFile = req.files.src;
     if(!req.files) res.status(400).send('No files were uploaded.');
-    tmpFile.mv(`./public/assets/images/${firstName}.jpg`, (err)=>{
+    tmpFile!==undefined && tmpFile.mv(`./public/assets/images/thumbnails/${lastName}.jpg`, (err)=>{
         if(err)
             return res.status(500).send(err);
         res.send('File Uploaded');
     });
+    
 });
 
 
@@ -73,18 +72,18 @@ app.delete('/indv-files/:id', (req,res)=>{
 });
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    next(createError(404));
-  });
-  // error handler
-  app.use(function(err, req, res, next) {
-    // set locals, only providing error in development
-    res.locals.message = err.message;
-    res.locals.error = req.app.get('env') === 'development' ? err : {};
-    // render the error page
-    res.status(err.status || 500);
-    res.render('error');
-  });
+// app.use(function(req, res, next) {
+//     next(createError(404));
+//   });
+//   // error handler
+//   app.use(function(err, req, res, next) {
+//     // set locals, only providing error in development
+//     res.locals.message = err.message;
+//     res.locals.error = req.app.get('env') === 'development' ? err : {};
+//     // render the error page
+//     res.status(err.status || 500);
+//     res.render('error');
+//   });
 
 app.listen(port, ()=>{
     console.log(`Server stated on port ${port}`)
